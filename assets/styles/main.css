@@ -488,6 +488,7 @@ main p {
   background-color: transparent;
   border: none;
   transition: 0.3s border-color, 0.3s color;
+  color: var(--black-1);
 }
 .form .cute_btn--error {
   border-color: var(--darck-red);
@@ -801,6 +802,7 @@ footer a {
     border-bottom: solid 3px #020202;
   }
   .form .form__bnts {
+    flex-direction: column;
     margin-bottom: 96px;
   }
   .form .form__bnts .cute_btn {
@@ -883,5 +885,10 @@ footer a {
   .tnx .can_res {
     font-size: 190px;
     line-height: 244.03px;
+  }
+}
+@media (min-width: 1100px) {
+  .form .form__bnts {
+    flex-direction: row;
   }
 }/*# sourceMappingURL=main.css.map */

@@ -509,6 +509,7 @@ main {
         background-color: transparent;
         border: none;
         transition: 0.3s border-color, 0.3s color;
+        color: var(--black-1);
     }
 
     .cute_btn--error {
@@ -874,6 +875,7 @@ footer {
         }
 
         .form__bnts {
+            flex-direction: column;
             margin-bottom: 96px;
 
             .cute_btn {
@@ -973,5 +975,11 @@ footer {
             font-size: 190px;
             line-height: 244.03px;
         }
+    }
+}
+
+@media (min-width: 1100px) {
+    .form .form__bnts {
+        flex-direction: row;
     }
 }
