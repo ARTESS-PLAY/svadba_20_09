@@ -1,0 +1,6 @@
+@font-face {
+    font-family: 'Frankinity';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Frankinity'), url('./FRANKINITY.otf') format('opentype');
+}
