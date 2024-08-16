@@ -5,43 +5,49 @@ $(document).ready(function () {
     /**
      * Запускаем видео при загрузке страницы
      */
-    setTimeout(() => {
-        $('#preloader_animation img').show();
-        $('#preloader_animation img').attr('src', './assets/images/site_start.gif');
-        $('#preloader_animation').addClass('preloader_animation--active');
+    var img = new Image();
+    img.src = './assets/images/site_start.gif';
+    img.onload = function () {
+        console.log('я загрузился');
 
-        // Поджигаем огонёк
         setTimeout(() => {
-            $('#preloader_animation').fadeOut();
-        }, 1700);
-        setTimeout(() => {
-            $('#preloader_animation').remove();
-        }, 2000);
+            $('#preloader_animation img').show();
+            $('#preloader_animation img').attr('src', './assets/images/site_start.gif');
+            $('#preloader_animation').addClass('preloader_animation--active');
 
-        // Поджигаем огонёк
-        setTimeout(() => {
-            $('html').removeClass('no-scroll');
-            $('body').removeClass('no-scroll');
-            $('#video_fire_start').show();
-            $('#video_fire_start').attr('src', './assets/images/fite_start.gif');
-
-            // Регестрируем таймаут, на смену видео на гифку
+            // Поджигаем огонёк
             setTimeout(() => {
-                $('#video_fire_start').hide();
-                $('#video_fire_gif').show();
-            }, 11000);
-
-            // Выводим первую секцию
+                $('#preloader_animation').fadeOut();
+            }, 1700);
             setTimeout(() => {
-                $('main .container').css('opacity', 1);
-                $('main .container').css('transform', 'translateY(0)');
+                $('#preloader_animation').remove();
+            }, 2000);
 
+            // Поджигаем огонёк
+            setTimeout(() => {
+                $('html').removeClass('no-scroll');
+                $('body').removeClass('no-scroll');
+                $('#video_fire_start').show();
+                $('#video_fire_start').attr('src', './assets/images/fite_start.gif');
+
+                // Регестрируем таймаут, на смену видео на гифку
                 setTimeout(() => {
-                    $('main .under_line').addClass('under_line--active');
-                }, 500);
-            }, 800);
-        }, 1800);
-    }, 10);
+                    $('#video_fire_start').hide();
+                    $('#video_fire_gif').show();
+                }, 11000);
+
+                // Выводим первую секцию
+                setTimeout(() => {
+                    $('main .container').css('opacity', 1);
+                    $('main .container').css('transform', 'translateY(0)');
+
+                    setTimeout(() => {
+                        $('main .under_line').addClass('under_line--active');
+                    }, 500);
+                }, 800);
+            }, 1800);
+        }, 10);
+    };
 
     /**
      * Появление блоков
