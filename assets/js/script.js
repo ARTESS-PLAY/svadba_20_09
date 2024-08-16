@@ -18,10 +18,10 @@ $(document).ready(function () {
             // Поджигаем огонёк
             setTimeout(() => {
                 $('#preloader_animation').fadeOut();
-            }, 1700);
+            }, 550);
             setTimeout(() => {
                 $('#preloader_animation').remove();
-            }, 2000);
+            }, 900);
 
             // Поджигаем огонёк
             setTimeout(() => {
@@ -45,7 +45,7 @@ $(document).ready(function () {
                         $('main .under_line').addClass('under_line--active');
                     }, 500);
                 }, 800);
-            }, 1800);
+            }, 1200);
         }, 10);
     };
 
